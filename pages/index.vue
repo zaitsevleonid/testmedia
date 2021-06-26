@@ -10,15 +10,15 @@
     </portal>
     <div class="tabs-wrapper">
       <nav class="tabs font-weight-bold">
-        <a
+        <div
           v-for="tab in tabs"
           :key="tab"
           class="tab"
           :class="{ 'is-active': tab === selectedTab }"
-          href="#"
           @click="selectedTab = tab"
-          >{{ tab }}</a
         >
+          {{ tab }}
+        </div>
       </nav>
     </div>
     <UserTable class="my-3" :items="items" />
@@ -41,6 +41,7 @@ export default Vue.extend({
   data() {
     return {
       selectedTab: '',
+      users: [], // Из-за кривой типизации в asyncData
     }
   },
 
@@ -49,7 +50,7 @@ export default Vue.extend({
       return ['Employee list', 'Management', 'Others']
     },
     items(): User[] {
-      return this.users.map((user) => {
+      return this.users.map((user: User) => {
         return Object.assign({}, user, {
           joiningDate: moment(user.joiningDate).format('ll'),
         })
@@ -67,11 +68,6 @@ export default Vue.extend({
 .btn-dashboard {
   background-color: #00dc81;
   border-color: #00dc81;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
 }
 
 .tab:not([class*='is-active']) {

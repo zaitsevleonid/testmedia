@@ -1,3 +1,8 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .tab {
   --animation-time: 200ms;
 
@@ -46,6 +51,7 @@
   justify-content: flex-start;
   width: 100%;
   border-radius: 6px 6px 0 0;
+  border-bottom: 2px solid #edf2f6;
 }
 
 .tabs-content {
@@ -64,8 +70,8 @@
 }
 
 .tab {
-  --underline-color: #2ecc71;
-  --underline-size: 5px;
+  --underline-color: #00dc81;
+  --underline-size: 3px;
 
   color: inherit;
   font-family: system-ui, sans-serif;

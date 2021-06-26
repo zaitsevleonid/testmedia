@@ -1,7 +1,7 @@
 <template>
   <div>
-    <header>
-      <div class="py-4 px-5 d-flex align-items-center justify-content-between">
+    <header class="container">
+      <div class="py-4 d-flex align-items-center justify-content-between">
         <h1>Dashboard</h1>
         <portal-target name="dashboard"></portal-target>
       </div>

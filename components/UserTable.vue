@@ -57,18 +57,18 @@ export default Vue.extend({
   border: inherit;
 }
 .table tbody td:first-child {
-  border-bottom-left-radius: 1rem;
-  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
 }
 .table tbody td:last-child {
-  border-bottom-right-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 .table tbody tr {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 .table tbody tr:hover {
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 .table tbody td {
   vertical-align: middle;
